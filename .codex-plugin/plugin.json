@@ -1,0 +1,13 @@
+{
+  "name": "codex-opencode-engineering",
+  "version": "1.0.0",
+  "description": "Focused engineering workflows for Codex and OpenCode.",
+  "author": { "name": "Codex Skills Maintainer" },
+  "license": "MIT",
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/repo-engineering/SKILL.md"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-opencode-engineering",
+  "version": "1.0.0",
+  "description": "Focused engineering workflows for Codex and OpenCode.",
+  "license": "MIT",
+  "author": { "name": "Codex Skills Maintainer" },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/repo-engineering/SKILL.md"
+    }
+  }
+}

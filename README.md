@@ -1,15 +1,35 @@
-# Codex/OpenCode Engineering
+# Codex / OpenCode Engineering
 
-Практический skill для разработки в локальных проектах пользователя: Python, web-приложения, MCP, интеграции и агентные workflow.
+Набор из четырёх навыков для безопасной разработки в существующих репозиториях: от реализации и диагностики до проверки интерфейса и публикации результата.
+
+## Навыки
+
+| Навык | Когда применять |
+|---|---|
+| `repo-engineering` | реализовать или переработать функцию с минимальным патчем и тестами |
+| `debug-and-verify` | найти первопричину воспроизводимого сбоя и доказать исправление |
+| `webapp-smoke-test` | проверить ключевой путь локального web-интерфейса, консоль и скриншоты |
+| `github-delivery` | подготовить ветку, pull request или release после явного разрешения пользователя |
 
 ## Установка
 
-Скопируйте папку в `%USERPROFILE%\\.codex\\skills\\codex-opencode-engineering` или `%USERPROFILE%\\.config\\opencode\\skills\\codex-opencode-engineering`.
+```powershell
+pwsh .\install.ps1 -Target codex
+pwsh .\install.ps1 -Target opencode
+```
 
-## Источники
+## Проверка
 
-- [OpenCode Skills](https://docs.opencode.ai/docs/skills/)
-- [OpenCode Agents and permissions](https://opencode.ai/docs/agents/)
-- [OpenAI Codex repository](https://github.com/openai/codex)
+```powershell
+pwsh .\scripts\validate.ps1
+```
 
-Материал skill оригинальный; ссылки ведут на первоисточники.
+Примеры ожидаемой и нежелательной активации находятся в `tests/activation-cases.md`. Архитектурные и лицензионные источники перечислены в `references/sources.md` и `THIRD_PARTY.md`.
+
+## Совместимость
+
+- Codex: навыки устанавливаются по одному в `.codex/skills`;
+- OpenCode: каталог подключён через `opencode.json`;
+- плагин Codex: `plugin.json` указывает на `./skills/` и onboarding-навык.
+
+Лицензия: MIT. Тексты написаны заново; сторонний код и документация в пакет не включены.
